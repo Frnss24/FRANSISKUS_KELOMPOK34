@@ -55,5 +55,5 @@ def kelola_rekening_bank():
             break  
         else:
             print("Opsi tidak valid. Silakan coba lagi.")
-        if _name_ == "_main_":
+        if __name__ == "_main_":
             kelola_rekening_bank() 
