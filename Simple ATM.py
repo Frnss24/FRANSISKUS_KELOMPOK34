@@ -19,3 +19,16 @@ class RekeningBank:
             print(f"Menarik Rp{jumlah}. Saldo saat ini adalah Rp{self.saldo}.")
         else:
             print("Saldo tidak mencukupi atau jumlah tidak valid.")
+            
+# Metode return untuk mengecek saldo
+    def cek_saldo(self):
+        return f"Saldo rekening untuk {self.pemegang_rekening} adalah Rp{self.saldo}."
+
+def pilih_opsi():
+    print("\nOpsi Sistem Bank:")
+    print("1. Cek saldo")
+    print("2. Setor uang")
+    print("3. Tarik uang")
+    print("4. Keluar")
+    opsi = int(input("Masukkan pilihan Anda (1-4): "))
+    return opsi
