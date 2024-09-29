@@ -32,3 +32,26 @@ def pilih_opsi():
     print("4. Keluar")
     opsi = int(input("Masukkan pilihan Anda (1-4): "))
     return opsi
+
+def kelola_rekening_bank():
+    pemegang_rekening = input("Masukkan nama pemegang rekening: ")
+    rekening = RekeningBank(pemegang_rekening)  
+
+    while True:  
+        opsi = pilih_opsi()  
+
+       
+        if opsi == 1:
+            saldo = rekening.cek_saldo()  
+            print(saldo)
+        elif opsi == 2:
+            jumlah = float(input("Masukkan jumlah untuk setor: "))
+            rekening.setor(jumlah)  
+        elif opsi == 3:
+            jumlah = float(input("Masukkan jumlah untuk tarik: "))
+            rekening.tarik(jumlah)  
+        elif opsi == 4:
+            print("Terima kasih telah menggunakan layanan kami!")
+            break  
+        else:
+            print("Opsi tidak valid. Silakan coba lagi.")
